@@ -1,18 +1,22 @@
 @mixin font-face($font-family, $url, $weight, $style) {
   @font-face {
-    font-style: $style;
-    font-weight: #{$weight};
     font-family: "#{$font-family}";
-
+    src: url('../fonts/#{$url}.woff2') format("woff2"),
+         url('../fonts/#{$url}.woff') format("woff");
+    font-weight: #{$weight};
     font-display: swap;
-    src: url("../fonts/#{$url}.woff2") format("woff2"),
-    url("../fonts/#{$url}.woff") format("woff");
+    font-style: $style;
   }
 }
 
-@include font-face("CeraPro", "CeraPro-Regular", 400, normal);
 
-@include font-face("Mulish", "Mulish-Regular", 400, normal);
-@include font-face("Mulish", "Mulish-Medium", 500, normal);
-@include font-face("Mulish", "Mulish-Bold", 700, normal);
-@include font-face("Mulish", "Mulish-ExtraBold", 800, normal);
+@include font-face("Poppins-Medium", "Poppins-Medium", 400, normal);
+@include font-face("Poppinsregular", "Poppinsregular", 500, normal);
+@include font-face("Poppinsmediumitalic", "Poppinsmediumitalic", 500, italic);
+@include font-face("Sourcesemibold", "Sourcesemibold", 600, normal);
+
+
+
+
+
+

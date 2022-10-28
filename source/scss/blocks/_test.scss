@@ -1,0 +1,172 @@
+.testimonials{
+    margin-top: 140px;
+    @include mobile{
+        margin-top: 50px;
+    }
+}
+.athletic{
+    display: flex;
+    grid-gap: 127px;
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px;
+    }
+}
+.runShoes{
+    padding: 0 15px;
+    img{
+        width: 100%;
+    }
+    @include tablet{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 300px;
+        padding: 0 15px;
+    }
+}
+.testimonials-title{
+    margin-bottom: 60px;
+    font-family: 'Sourcesemibold';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 44px;
+    line-height: 130%;
+    color: #1A0A03;
+    text-align: center;
+    @include mobile{
+        margin-bottom: 10px;
+        font-size: 22px;
+    }
+}
+.shoesTwit{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px;
+    max-width: 400px;
+    @include mobile{
+        grid-gap: 5px;
+        max-width: 300px;
+    }
+    &-title{
+        font-family: 'Sourcesemibold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        color: #1A0A03;
+        @include mobile{
+            font-size: 20px;
+        }
+    }
+    &-comment{
+        font-family: 'Poppinsmediumitalic';
+        font-style: italic;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 160%;
+        color: #1A0A03;
+        opacity: 0.7;
+        @include mobile{
+            font-size: 12px;
+        }
+    }
+    &-name{
+        font-family: 'Poppins-Medium';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        color: #1A0A03;
+        @include mobile{
+            font-size: 16px;
+        }
+    }
+    &-job{
+        font-family: 'Poppinsregular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 160%;
+        color: #1A0A03;
+        opacity: 0.8;
+    }
+    &-face{
+        display: flex;
+        max-width: 100px;
+        margin-bottom: 30px;
+        @include mobile{
+            max-width: 70px;
+            margin-bottom: 10px;
+        }
+    }
+}
+.twit-swap{
+    max-width: 400px;
+    @include mobile{
+        max-width: 400px;
+        display: flex;
+        left: 15px;
+    }
+}
+
+.twit-slide{
+    max-width: 550px;
+    @include mobile{
+        max-width: 400px;   
+    }
+}
+
+
+.testimonials-btnR{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 320px;
+    left: 1000px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    border: 50px;
+    svg{stroke: #1A0A03;}
+    border: none;
+    transition: .7s;
+    z-index: 1;
+    @include mobile{
+        position: relative;
+        bottom: 220px;
+        left: 200px;
+    }
+}
+.testimonials-btnL{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 320px;
+    left: 1100px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    border: 50px;
+    svg{stroke: #1A0A03;}
+    border: none;
+    transition: .7s;
+    z-index: 1;
+    @include mobile{
+        bottom: 220px;
+        left: 250px;
+    }
+}
+.testimonials-btnR:hover{
+    svg{stroke: #EE5514;} 
+    transition: 0.7s;
+}
+.testimonials-btnL:hover{
+    svg{stroke: #EE5514;} 
+    transition: .7s;
+}
+.testimonials button:hover{
+    background-color:rgba(238, 85, 20, 0.22)
+}

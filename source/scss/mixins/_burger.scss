@@ -1,37 +1,27 @@
 /* stylelint-disable */
 
 @mixin burger {
-  position: relative;
-  z-index: 50;
+  --burger-width: 30px;
+  --burger-height: 30px;
+  --burger-line-height: 2px;
 
+  position: relative;
+  border: none;
+  padding: 0;
   width: var(--burger-width);
   height: var(--burger-height);
-  padding: 0;
-
-  color: var(--color-b);
-
+  color: #000;
   background-color: transparent;
-  border: none;
   cursor: pointer;
-
-  --burger-height: 25px;
-  --burger-line-height: 2px;
-  --burger-width: 30px;
-  @include for-tablet {
-    display: none;
-  }
 
   &::before,
   &::after {
     content: "";
     position: absolute;
     left: 0;
-
     width: 100%;
     height: var(--burger-line-height);
-
     background-color: currentColor;
-
     transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
   }
 
@@ -45,42 +35,30 @@
 
   &__line {
     position: absolute;
-    top: 50%;
     left: 0;
-
+    top: 50%;
     width: 100%;
     height: var(--burger-line-height);
-
     background-color: currentColor;
     transform: translateY(-50%);
-
     transition: transform 0.3s ease-in-out;
   }
 
-  &.active {
+  &--active {
     &::before {
       top: 50%;
-
-      background-color: var(--color-a);
       transform: rotate(45deg);
-
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
     &::after {
       top: 50%;
-
-      background-color: var(--color-a);
       transform: rotate(-45deg);
-
       transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
     }
 
     .burger__line {
-      color: var(--color-a);
-
       transform: scale(0);
-
       transition: transform 0.3s ease-in-out;
     }
   }

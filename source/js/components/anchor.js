@@ -1,4 +1,12 @@
-// Подключение плавной прокрутки к якорям
-// https://github.com/cferdinandi/smooth-scroll
-import SmoothScroll from 'smooth-scroll';
-const scroll = new SmoothScroll('[anchor-button]');
+const anchorButtons = document.querySelectorAll('.anchor-button');
+
+for(const anchorButton of anchorButtons) {
+  anchorButton.addEventListener('click', function(e){
+    e.preventDefault();
+    const id = e.target.getAttribute('href').replace('#', '');
+    window.scrollTo({
+      top: document.getElementById(`${id}`).offsetTop,
+      behavior: 'smooth',
+    });
+  });
+}

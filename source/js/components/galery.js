@@ -10,6 +10,4 @@ myVideos.map(function(video){
         rel: 0
     }
 })
-
-
-
+// lightGallery(document.getElementById('sert'));

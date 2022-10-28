@@ -1,4 +1,4 @@
-if (document.getElementById('upbutton')) {
+ if (document.getElementById('upbutton')) {
   let timeOut;
 
   window.onscroll = function () {
@@ -18,4 +18,5 @@ if (document.getElementById('upbutton')) {
   })
 
  }
+
 

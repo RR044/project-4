@@ -1,0 +1,36 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  color: #1A0A03;
+  padding: 36px 15px ;
+  display: flex;
+  align-items: center;
+  grid-gap: 100px;
+  @include tablet{
+    padding: 35px 15px;
+  }
+}
+
+.nav-list{
+  display: flex;
+  flex-direction: row;
+  font-family: 'Poppinsregular';
+  grid-gap: 40px;
+  &__link{
+    width: 50px;
+    height: 26px;
+    color: #1A0A03;
+  }
+  @media (max-width: (1024px)) {
+    display: none;
+  }
+}
+.nav-list li:hover{
+  font-family: 'Poppins-Medium';
+  color: #EE5514;
+} 
+.header-btn{
+  @media (max-width: (1024px)) {
+    display: none;
+  }
+}

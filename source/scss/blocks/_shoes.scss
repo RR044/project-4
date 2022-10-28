@@ -1,0 +1,225 @@
+.shoes-text{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 360px;
+    grid-gap: 20px;
+    @include mobile{
+        display: flex;
+        margin: 0 0 0 10px;
+        align-items: center;
+        justify-content: center;
+        max-width: 540px;
+    }
+    &__title{
+        font-family: 'Sourcesemibold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 61px;
+        line-height: 120%;
+        color: #1A0A03;
+        @include mobile{
+            font-size: 22px;
+        }
+    }
+    &__colorword{
+        color:  #EE5514;
+        @include mobile{
+            font-size: 22px;
+        }
+    }
+    &__info{
+        font-family: 'Poppinsregular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: #1A0A03;
+        opacity: 0.7;
+        @include mobile{
+            font-size: 14px;
+        }
+    }
+}
+.shoes-select{
+    display: flex;
+    flex-direction: row;
+    grid-gap: 100px;
+    align-items: center;
+    justify-content: flex-start;
+    @include mobile{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+
+    }
+    &__item{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 2px;
+        position: relative;
+        @include mobile{
+            &:last-child{
+                grid-column:span 2;
+                display: flex;
+                align-items: center;
+            }
+        }
+    }
+    &__item-title{
+        position: relative;
+        font-family: 'Poppinsregular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: #1A0A03;
+        opacity: 0.7;
+        @include mobile{
+            display: flex;
+            justify-content: center;
+            opacity: 1;
+            font-size: 18px;
+        }
+    }
+    &__item:not(:first-child)::before{
+        position: absolute;
+        content: "";
+        border-left: 1px solid #EE5514;
+        width: 0px;
+        height: 35px;
+        left: -35px;
+        top: 10px;
+        @include mobile{
+            left: -10px;
+            top: 10px;
+        }
+    }
+    &__item:last-child::before{
+        display: none;
+    }
+    &__item-text{
+        font-family: 'Poppins-Medium';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 160%;
+        color: #1A0A03;
+        @include mobile{
+            
+        }
+    }
+    &__item-btnBuy{
+        align-content: center;
+        text-align: center;
+        max-width: 128px;
+        max-height: 56px;
+        background: #EE5514;
+        color: #FFFFFF;
+        border-radius: 5px;
+        font-family: 'Poppinsregular';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 160%;
+        border: 1px solid #EE5514;
+        transition: .2s;
+        &:hover{
+            width: 128px;
+            height: 56px;
+            background: #1A0A03;
+            color: #EE5514;
+            border: 1px solid #EE5514;
+            transition: .2s;
+        }
+        @include tablet{
+            display: flex;
+            min-width: 100px;
+            min-height: 45px;
+            &:hover{
+                width: inherit;
+                height:inherit;
+                transform: none;
+                color: #fff;
+            }
+        }
+    }
+    &__item-double{
+        display: flex;
+    }
+}
+.slider-first{
+    min-height: 400px;
+}
+.shoes-table{
+    display: flex;
+    grid-gap: 270px;
+    @include mobile {
+        display: flex; 
+        flex-direction: column;
+        grid-gap: 0;
+    }
+}
+.shoes-photo{
+    position: relative;
+    background-image: url(/img/sprite/redshoes.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    z-index: 1;
+}
+.shoes-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 180px;
+    left: 1100px;
+    min-width: 70px;
+    min-height: 70px;
+    border-radius: 50%;
+    border: 50px;
+    align-items: center;
+    justify-content: center;
+    svg{stroke: #1A0A03;}
+    border: none;
+    transition: .7s;
+}
+.shoes-btn:hover{
+        svg{stroke: #EE5514;} 
+    }
+.shoes button:hover{
+    background-color:rgba(238, 85, 20, 0.22)
+}
+.chose-picture{
+    position: relative;
+    background-image: url(/img/sprite/border.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 85%;
+    width: 394px;
+    height: 400px;
+    &::after{
+        position: absolute;
+        content: "";
+        background-image: url(/img/sprite/shadow.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 389px;
+        height: 89px;
+        bottom: 39px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.chose-slide{
+    max-width: 550px;
+}
+.slider-first{
+    img{
+        position: relative;
+        top:20px;
+        width: 100%;
+        height: 350px;
+    }
+}

@@ -1,0 +1,264 @@
+.gallary{
+    margin-top: 140px;
+    @include mobile{
+        margin-top: 50px;
+    }
+    &-text{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 15px;
+        @include mobile{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-gap: 5px;
+        }
+    }
+    &__title{
+        font-family: 'Sourcesemibold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 150%;
+        letter-spacing: 0.05em;
+        color: #EE5514;
+    }
+    &__title-big{
+        font-family: 'Sourcesemibold';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 44px;
+        line-height: 130%;
+        color: #1A0A03;
+        @include mobile{
+            font-size: 20px;
+        }
+    }
+    &-list{
+        &__item{
+            &-title{
+                font-family: 'Sourcesemibold';
+                font-style: normal;
+                font-weight: 600;
+                font-size: 22px;
+                line-height: 150%;
+                color: #1A0A03;
+                @include mobile{
+                    font-size: 20px;
+                }
+            }
+            &-size{
+                display: flex;
+                flex-direction: row;
+                grid-gap: 10px;
+            }
+            &-price{
+                display: flex;
+                flex-direction: row;
+                grid-gap: 10px;
+            }
+            &-btnBuy{
+                width: 128px;
+                height: 56px;
+                justify-content: center;
+                align-items: center;
+                align-content: center;
+                text-align: center;
+                background: #EE5514;
+                color: #FFFFFF;
+                border-radius: 5px;
+                font-family: 'Poppinsregular';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 160%;
+                border: 1px solid #EE5514;
+                transition: .2s;
+                &:hover{
+                    width: 128px;
+                    height: 56px;
+                    background-color: #1A0A03;
+                    color: #EE5514;
+                    border: 1px solid #EE5514;
+                    transition: .2s;
+                }
+            }
+        }
+    }
+}
+.size-main{
+    font-family: 'Poppinsregular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1A0A03;
+    opacity: 0.7;
+}
+.size-name{
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1A0A03;
+    opacity: 0.8;
+}
+.price-main{
+    font-family: 'Poppinsregular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1A0A03;
+    opacity: 0.7;
+}
+.price-value{
+    font-family: 'Poppins-Medium';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 160%;
+    color: #1A0A03;
+    opacity: 0.8;
+}
+.category{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    &-buttoms{
+        display: flex;
+        grid-gap: 50px;
+    }
+}
+.category-list{
+    display: flex;
+    flex-direction: row;
+    grid-gap: 40px;
+    font-family: 'Poppinsregular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    color: #1A0A03;
+    @include mobile{
+        font-size: 14px;
+        grid-gap: 15px;
+        margin: 10px 15px;
+    }
+    &__item{
+        font-family: 'Poppinsregular';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 140%;
+        letter-spacing: 0.05em;
+        color: #1A0A03;
+        @include mobile{
+            font-size: 14px;
+        }
+        :hover {
+            font-family: 'Poppins-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 140%;
+            letter-spacing: 0.05em;
+            color: #EE5514;
+            @include mobile{
+                font-size: 14px;
+            }
+        }
+        :focus {
+            font-family: 'Poppins-Medium';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 140%;
+            letter-spacing: 0.05em;
+            color: #EE5514;
+            text-decoration: underline #EE5514;
+            @include mobile{
+                font-size: 14px;
+            }
+        }
+    }
+}
+.gallary-box{
+    width: 100%;
+}
+.gallary-swap{
+    width: 1140px;
+}
+.gallary-wrapper{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.gallary-slide{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+}
+.gallary-scroll{
+    display: flex;
+    justify-content: flex-end;
+    grid-gap: 50px;
+}
+.gallary-L{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    border: 50px;
+    align-items: center;
+    justify-content: center;
+    svg{stroke: #1A0A03;}
+    border: none;
+    transition: .7s;
+    z-index: 1;
+}
+.gallary-R{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 50%;
+    border: 50px;
+    align-items: center;
+    justify-content: center;
+    svg{stroke: #1A0A03;}
+    border: none;
+    transition: .7s;
+    z-index: 1;
+}
+.gallary-:hover{
+    svg{stroke: #EE5514;} 
+    transition: 0.7s;
+}
+.gallary-L:hover{
+    svg{stroke: #EE5514;} 
+    transition: .7s;
+}
+.gallary button:hover{
+    background-color:rgba(238, 85, 20, 0.22)
+}
+.foot{
+    position: relative;
+    width:262px;
+    object-fit:cover;
+    margin-top: 60px;
+}
+.tabs-main{
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+.tabs-content{
+    grid-column: span 2;
+}
