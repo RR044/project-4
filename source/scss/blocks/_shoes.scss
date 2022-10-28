@@ -181,13 +181,14 @@
     border: 50px;
     align-items: center;
     justify-content: center;
-    svg{stroke: #1A0A03;}
+    background-image: url("data:image/svg+xml,%3Csvg width='16' height='28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.8 26.4 14.2 14 1.8 1.6' stroke='%231A0A03' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
     border: none;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: auto;
     transition: .7s;
 }
-.shoes-btn:hover{
-        svg{stroke: #EE5514;} 
-    }
+
 .shoes button:hover{
     background-color:rgba(238, 85, 20, 0.22)
 }
