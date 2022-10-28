@@ -1,0 +1,35 @@
+.info-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  grid-gap: clamp(25px, 2.182vw, 36px);
+
+@include tablet {
+    max-width: 521px;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 298px;
+    padding: 24px;
+
+    font-weight: 300;
+    font-size: clamp(18px, 1.515vw, 25px);
+    line-height: 100%;
+    font-family: var(--font-family);
+    text-align: center;
+    color: var(--color-b);
+
+    border: solid 1px var(--color-c);
+
+    transition: all 0.4s;
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+}

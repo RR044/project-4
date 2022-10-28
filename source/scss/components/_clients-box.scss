@@ -1,0 +1,92 @@
+.clients-box {
+  position: relative;
+
+  width: 100%;
+  min-height: Min(30.303vw, 500px);
+
+
+  &__img {
+    position: absolute;
+
+
+    &--win {
+      top: -25%;
+      left: -7%;
+
+      width: Min(31.939vw, 527px);
+      height: auto;
+
+      animation: increase 2.5s infinite alternate;
+
+@include tablet {
+        top: -36%;
+        left: 32%;
+      }
+
+@include small-tablet {
+        top: -64%;
+        left: 15%;
+      }
+    }
+
+    &--circle {
+      top: 9%;
+      left: 5%;
+
+      width: Min(20vw, 330px);
+      height: auto;
+
+      animation: shakeLeft 3.5s infinite alternate;
+
+@include tablet {
+        top: 17%;
+        left: 39%;
+      }
+
+@include small-tablet {
+        top: -4%;
+        left: 24%;
+      }
+    }
+    &--hand {
+      top: 6%;
+      left: 46%;
+      z-index: 3;
+
+      width: Min(21.212vw, 350px);
+      height: auto;
+
+      animation: increase 2s infinite alternate;
+
+@include tablet {
+        top: 6%;
+        left: 63%;
+      }
+
+@include small-tablet {
+        top: -22%;
+        left: 50%;
+      }
+    }
+    &--road {
+      top: -11%;
+      right: -8%;
+      z-index: 2;
+
+      width: Min(34.909vw, 576px);
+      height: auto;
+
+      animation: shake 4s infinite alternate;
+
+@include tablet {
+        top: -22%;
+        right: 4%;
+      }
+
+@include small-tablet {
+        top: -50%;
+        right: 18%;
+      }
+    }
+  }
+}

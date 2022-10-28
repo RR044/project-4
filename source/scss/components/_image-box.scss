@@ -1,0 +1,213 @@
+.image-box {
+  position: relative;
+
+  width: 100%;
+  min-height: Min(29.697vw, 490px);
+
+
+
+  // @keyframes increase {
+  //   from {
+  //     transform: scale(1);
+  //   }
+
+  //   to {
+  //     transform: scale(1.05);
+  //   }
+  // }
+  &__item {
+    position: absolute;
+
+
+    &--digital {
+      bottom: -22%;
+      left: 42%;
+      z-index: 6;
+
+      width: Min(24.303vw, 401px);
+      height: auto;
+
+      animation: increase 3s infinite alternate;
+
+@include laptop {
+        left: 44%;
+      }
+
+@include tablet {
+        bottom: -19%;
+        left: 54%;
+      }
+    }
+
+    &--air {
+      top: 47%;
+      left: 66%;
+      z-index: 6;
+
+      width: Min(4.061vw, 67px);
+      height: auto;
+
+@include laptop {
+        left: 56%;
+      }
+
+@include tablet {
+        top: 47%;
+        left: 66%;
+      }
+    }
+
+    &--ex {
+      top: 14%;
+      left: 22%;
+      z-index: 4;
+
+      width: Min(51.515vw, 850px);
+      height: auto;
+
+@include laptop {
+        left: 12%;
+      }
+
+@include tablet {
+        top: 14%;
+        left: 22%;
+      }
+    }
+
+    &--logo {
+      top: -20%;
+      left: 22%;
+      z-index: 5;
+
+      width: Min(22.121vw, 365px);
+      height: auto;
+
+      animation: increase 3s infinite alternate;
+
+@include tablet {
+        top: -20%;
+        left: 22%;
+      }
+
+@include laptop {
+        left: 12%;
+      }
+    }
+
+    &--flex {
+      top: 47%;
+      left: 22%;
+      z-index: 5;
+
+      width: Min(10.061vw, 166px);
+      height: auto;
+
+      animation: increase 3s infinite alternate;
+
+@include tablet {
+        top: 47%;
+        left: 22%;
+      }
+
+@include laptop {
+        left: 12%;
+      }
+    }
+
+    &--mess {
+      top: 3%;
+      left: 77%;
+      z-index: 5;
+
+      width: Min(20vw, 330px);
+      height: auto;
+
+      animation: increase 3s infinite alternate;
+
+@include tablet {
+        top: 3%;
+        left: 77%;
+      }
+
+@include laptop {
+        left: 67%;
+      }
+    }
+
+    &--boy {
+      top: -42%;
+      left: 65%;
+
+      width: Min(22.485vw, 371px);
+      height: auto;
+
+      animation: increase 3s infinite alternate;
+
+@include tablet {
+        top: -42%;
+        left: 65%;
+      }
+
+@include laptop {
+        left: 55%;
+      }
+    }
+
+    &--rs {
+      top: 57%;
+      left: 79%;
+      z-index: 5;
+
+      width: Min(7.455vw, 123px);
+      height: auto;
+
+@include tablet {
+        top: 57%;
+        left: 79%;
+      }
+
+@include laptop {
+        left: 69%;
+      }
+    }
+
+    &--kiss {
+      top: -5%;
+      left: 53%;
+      z-index: 5;
+
+      width: Min(10vw, 165px);
+      height: auto;
+
+@include tablet {
+        top: -5%;
+        left: 53%;
+      }
+
+@include laptop {
+        left: 43%;
+      }
+    }
+
+    &--boobs {
+      top: 49%;
+      left: 49%;
+      z-index: 3;
+
+      width: Min(19.636vw, 324px);
+      height: auto;
+
+      animation: increase 2s infinite alternate;
+
+@include laptop {
+        left: 39%;
+      }
+
+@include tablet {
+        top: 49%;
+        left: 49%;
+      }
+    }
+  }
+}

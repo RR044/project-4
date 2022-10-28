@@ -1,0 +1,104 @@
+.info-box {
+  position: relative;
+
+  width: 100%;
+  min-height: Min(24.242vw, 400px);
+
+  &--right {
+    @include mobile {
+      display: none;
+    }
+  }
+  &__img {
+    position: absolute;
+
+
+
+    &--text {
+      top: -2%;
+      left: -5%;
+
+      width: Min(25.03vw, 413px);
+      height: auto;
+
+      animation: increase 3.5s infinite alternate;
+
+@include big-desktop {
+        left: 5%;
+      }
+
+@include small-tablet {
+        top: -5%;
+        left: 36%;
+      }
+    }
+    &--lips {
+      top: 55%;
+      left: -12%;
+
+      width: Min(10.121vw, 167px);
+      height: auto;
+
+      animation: increase 2s infinite alternate;
+
+@include tablet {
+        top: 39%;
+        left: 1%;
+      }
+
+@include small-tablet {
+        top: 52%;
+        left: 27%;
+      }
+    }
+    &--collar {
+      top: 41%;
+      left: 31%;
+
+      width: Min(19.939vw, 329px);
+      height: auto;
+
+      animation: increase 3s infinite alternate;
+
+@include small-tablet {
+        top: 21%;
+        left: 57%;
+      }
+    }
+
+    &--boy {
+      top: -4%;
+      left: 26%;
+
+      width: Min(22.485vw, 371px);
+      height: auto;
+
+      animation: increase 2.5s infinite alternate;
+
+@include tablet {
+        top: 0;
+        left: 14%;
+      }
+
+@include small-tablet {
+        top: 0;
+        left: 7%;
+      }
+    }
+
+    &--mess {
+      top: 38%;
+      left: 51%;
+
+      width: Min(19.091vw, 315px);
+      height: auto;
+
+      animation: increase 3s infinite alternate;
+
+@include small-tablet {
+        top: 46%;
+        left: 22%;
+      }
+    }
+  }
+}

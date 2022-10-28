@@ -1,0 +1,404 @@
+.services-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__item {
+    position: relative;
+
+    display: grid;
+    width: 100%;
+    padding: clamp(40px, 7.273vw, 120px) 0;
+
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+
+@include tablet {
+      grid-gap: 50px;
+      grid-template-columns: 100%;
+      .main-list {
+        order: 2;
+        max-width: 550px;
+      }
+    }
+
+@include mobile {
+      justify-items: start !important;
+    }
+
+    &:nth-child(even) {
+      @include tablet {
+        justify-items: end ;
+      }
+      .main-list {
+        order: 2;
+        padding-left: 9%;
+      }
+    }
+    &--end {
+      justify-items: end;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      right: -100vw;
+      bottom: 0;
+      left: -100vw;
+
+      height: 1px;
+
+      background-color: var(--color-c);
+    }
+  }
+
+
+  &__inner {
+    position: relative;
+
+    width: 100%;
+    min-height: Min(9.697vw, 160px);
+  }
+
+  &__img {
+    position: absolute;
+
+
+
+    &--seo {
+      top: -40%;
+      left: 19%;
+
+      width: Min(16.182vw, 267px);
+      height: auto;
+
+      animation: shake 4s infinite alternate;
+
+@include tablet {
+        left: 60%;
+      }
+
+@include small-tablet {
+        left: 40%;
+      }
+    }
+
+    &--promo {
+      top: 64%;
+      left: -1%;
+
+      width: Min(36.182vw, 597px);
+      height: auto;
+
+      animation: increase 3s infinite alternate;
+
+@include tablet {
+        left: 60%;
+      }
+
+@include small-tablet {
+        left: 30%;
+      }
+    }
+    &--target {
+      top: -17%;
+      left: 11%;
+      z-index: 2;
+
+      width: Min(25.758vw, 425px);
+      height: auto;
+
+      animation: shakeLeft 4s infinite alternate;
+
+@include tablet {
+        left: 3%;
+      }
+
+@include small-tablet {
+        left: 23%;
+      }
+    }
+    &--logo {
+      top: 30%;
+      left: 35%;
+
+      width: Min(29.152vw, 481px);
+      height: auto;
+
+      animation: shakeLeft 4s infinite alternate;
+
+@include tablet {
+        left: 25%;
+      }
+
+@include small-tablet {
+        top: 37%;
+        left: 43%;
+      }
+    }
+    &--smile {
+      top: -40%;
+      left: 7%;
+
+      width: Min(13.697vw, 226px);
+      height: auto;
+
+      animation: increase 2s infinite alternate;
+
+@include tablet {
+        left: 43%;
+      }
+
+@include small-tablet {
+        top: -30%;
+        left: 23%;
+      }
+    }
+    &--engine {
+      top: 1%;
+      left: 44%;
+      z-index: 3;
+
+      width: Min(20.364vw, 336px);
+      height: auto;
+
+      animation: increase 2s infinite alternate;
+
+@include tablet {
+        left: 66%;
+      }
+
+@include small-tablet {
+        left: 50%;
+      }
+    }
+    &--traffic {
+      top: 61%;
+      left: 23%;
+      z-index: 2;
+
+      width: Min(23.394vw, 386px);
+      height: auto;
+
+@include tablet {
+        left: 54%;
+      }
+
+@include small-tablet {
+        left: 35%;
+      }
+    }
+    &--search {
+      top: -57%;
+      left: 18%;
+      z-index: 2;
+
+      width: Min(24.182vw, 399px);
+      height: auto;
+
+@include tablet {
+        left: 49%;
+      }
+
+@include small-tablet {
+        left: 30%;
+      }
+    }
+
+
+    &--media {
+      top: -15%;
+      left: 17%;
+
+      width: Min(19.515vw, 322px);
+      height: auto;
+
+      animation: increase 3.5s infinite alternate;
+
+@include tablet {
+        left: 4%;
+      }
+
+@include small-tablet {
+        top: -18%;
+        left: 27%;
+      }
+    }
+    &--brand {
+      top: -16%;
+      left: 64%;
+
+      width: Min(17.576vw, 290px);
+      height: auto;
+
+      animation: increase 3.5s infinite alternate;
+
+@include tablet {
+        left: 27%;
+      }
+
+@include small-tablet {
+        top: -22%;
+        left: 49%;
+      }
+    }
+    &--dev {
+      top: 38%;
+      left: 21%;
+
+      width: Min(36.182vw, 597px);
+      height: auto;
+
+      animation: increase 2.5s infinite alternate;
+
+@include tablet {
+        top: 72%;
+        left: 6%;
+      }
+
+@include small-tablet {
+        top: 65%;
+        left: 29%;
+      }
+    }
+
+    &--promotion {
+      top: -12%;
+      left: -6%;
+
+      width: Min(28.545vw, 471px);
+      height: auto;
+
+      animation: increase 3.5s infinite alternate;
+
+@include tablet {
+        top: -49%;
+        left: 46%;
+      }
+
+@include small-tablet {
+        left: 21%;
+      }
+    }
+    &--application {
+      top: 65%;
+      left: 30%;
+
+      width: Min(30.424vw, 502px);
+      height: auto;
+
+      animation: increase 3.5s infinite alternate;
+
+@include tablet {
+        top: 90%;
+        left: 67%;
+      }
+
+@include small-tablet {
+        left: 49%;
+      }
+    }
+    &--through {
+      top: 23%;
+      left: 23%;
+
+      width: Min(22.485vw, 371px);
+      height: auto;
+
+      animation: increase 2.5s infinite alternate;
+
+@include tablet {
+        top: 19%;
+        left: 60%;
+      }
+
+@include small-tablet {
+        left: 38%;
+      }
+    }
+    &--youtube {
+      top: -22%;
+      left: 9%;
+
+      width: Min(29.697vw, 490px);
+      height: auto;
+
+      animation: increase 2.5s infinite alternate;
+
+@include tablet {
+        top: -30%;
+        left: 1%;
+      }
+
+@include small-tablet {
+        top: -43%;
+        left: 12%;
+      }
+    }
+    &--twitch {
+      top: -21%;
+      left: 54%;
+
+      width: Min(29.697vw, 490px);
+      height: auto;
+
+      animation: increase 2.5s infinite alternate;
+
+@include tablet {
+        top: -30%;
+        left: 34%;
+      }
+
+@include small-tablet {
+        top: -46%;
+        left: 53%;
+      }
+    }
+    &--inst {
+      top: 46%;
+      left: 17%;
+
+      width: Min(29.697vw, 490px);
+      height: auto;
+
+      animation: increase 2.5s infinite alternate;
+
+@include tablet {
+        top: 114%;
+        left: 17%;
+      }
+
+@include small-tablet {
+        top: 86%;
+        left: 34%;
+      }
+    }
+    &--number {
+      top: -32%;
+      left: 15%;
+
+      width: Min(21.03vw, 347px);
+      height: auto;
+
+      animation: increase 2.5s infinite alternate;
+
+@include tablet {
+        top: -46%;
+        left: 39%;
+      }
+    }
+    &--influencers {
+      top: 35%;
+      left: 4%;
+
+      width: Min(38.97vw, 643px);
+      height: auto;
+
+      animation: increase 2.5s infinite alternate;
+
+@include tablet {
+        top: 36%;
+        left: 30%;
+      }
+    }
+  }
+}

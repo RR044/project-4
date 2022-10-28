@@ -1,0 +1,134 @@
+.team-box {
+  position: relative;
+
+  width: 100%;
+  min-height: Min(36.364vw, 600px);
+
+  // @keyframes shake {
+  //   from {
+  //     transform: scale(1) rotate(0deg);
+  //   }
+
+  //   to {
+  //     transform: scale(1.1) rotate(5deg);
+  //   }
+  // }
+  // @keyframes shakeLeft {
+  //   from {
+  //     transform: scale(1) rotate(0deg);
+  //   }
+
+  //   to {
+  //     transform: scale(1.1) rotate(-5deg);
+  //   }
+  // }
+
+
+  &__img {
+    position: absolute;
+
+
+    &--inst {
+      top: -19%;
+      left: 6%;
+
+      width: Min(30.485vw, 503px);
+      height: auto;
+
+      animation: shake 4s infinite alternate;
+
+@include tablet {
+        top: -30%;
+        left: 6%;
+      }
+
+@include mobile {
+        top: -38%;
+        left: 6%;
+      }
+    }
+
+    &--tongue {
+      top: 3%;
+      left: 15%;
+
+      width: Min(14.182vw, 234px);
+      height: auto;
+
+      animation: increase 2.5s infinite alternate;
+    }
+    &--fb {
+      top: 7%;
+      left: 51%;
+
+      width: Min(27.212vw, 449px);
+      height: auto;
+
+      animation: shakeLeft 4s infinite alternate;
+
+@include tablet {
+        top: -10%;
+        left: 50%;
+      }
+
+@include mobile {
+        top: -31%;
+        left: 63%;
+      }
+    }
+
+    &--tik {
+      top: 28%;
+      left: 17%;
+
+      width: Min(28.182vw, 465px);
+      height: auto;
+
+      animation: shake 4s infinite alternate;
+
+@include tablet {
+        top: 31%;
+        left: 40%;
+      }
+
+@include mobile {
+        top: 13%;
+        left: 40%;
+      }
+    }
+
+    &--push {
+      top: 69%;
+      left: 0;
+
+      width: Min(24vw, 396px);
+      height: auto;
+
+      animation: shakeLeft 4s infinite alternate;
+
+@include tablet {
+        top: 65%;
+        left: 7%;
+      }
+    }
+    &--telegram {
+      top: 49%;
+      left: 56%;
+
+      width: Min(25.879vw, 427px);
+      height: auto;
+
+      animation: increase 2.5s infinite alternate;
+
+@include tablet {
+        top: 68%;
+        left: 61%;
+      }
+
+@include mobile {
+        top: 57%;
+        left: 61%;
+      }
+    }
+  }
+}

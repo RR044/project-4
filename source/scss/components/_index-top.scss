@@ -1,0 +1,93 @@
+.index-top {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 38px 0;
+
+  grid-gap: clamp(20px, 2.909vw, 48px);
+
+  p {
+    max-width: 940px;
+
+    font-style: normal;
+    font-weight: 300;
+    font-size: clamp(16px, 1.333vw, 22px);
+    line-height: normal;
+    font-family: var(--font-family);
+    text-align: center;
+    color: var(--color-b);
+
+@include big-desktop {
+      max-width: 625px;
+    }
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    right: -100vw;
+    bottom: 0;
+    left: -100vw;
+
+    height: 1px;
+
+    background-color: var(--color-c);
+  }
+  &__name {
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(30px, 3.03vw, 50px);
+    line-height: 120%;
+    font-family: var(--font-family);
+    color: var(--color-b);
+  }
+}
+
+.info-top {
+  padding: 0 0 clamp(25px, 2.909vw, 48px);
+  &::before {
+    display: none;
+  }
+}
+
+
+.comand-top {
+  position: relative;
+
+  padding: 0 0 clamp(30px, 4.061vw, 67px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -43%;
+    left: -2%;
+
+    width: 335px;
+    height: 298px;
+
+    background-image: url(/img/index/enot.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+
+@include laptop {
+      width: 235px;
+      height: 198px;
+    }
+
+@include tablet {
+      top: -38%;
+
+      width: 185px;
+      height: 148px;
+    }
+
+@include small-tablet {
+      display: none;
+    }
+  }
+  &::before {
+    display: none;
+  }
+}
