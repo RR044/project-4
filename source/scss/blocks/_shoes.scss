@@ -5,6 +5,13 @@
     justify-content: center;
     max-width: 360px;
     grid-gap: 20px;
+    @include tablet{
+        display: flex;
+        margin: 0 0 0 10px;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+    }
     @include mobile{
         display: flex;
         margin: 0 0 0 10px;
@@ -19,12 +26,18 @@
         font-size: 61px;
         line-height: 120%;
         color: #1A0A03;
+        @include tablet{
+            font-size: 44px;
+        }
         @include mobile{
             font-size: 22px;
         }
     }
     &__colorword{
         color:  #EE5514;
+        @include tablet{
+            font-size: 44px;
+        }
         @include mobile{
             font-size: 22px;
         }
@@ -37,7 +50,7 @@
         line-height: 160%;
         color: #1A0A03;
         opacity: 0.7;
-        @include mobile{
+        @include tablet{
             font-size: 14px;
         }
     }
@@ -48,7 +61,7 @@
     grid-gap: 100px;
     align-items: center;
     justify-content: flex-start;
-    @include mobile{
+    @include tablet{
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
@@ -59,7 +72,7 @@
         flex-direction: column;
         grid-gap: 2px;
         position: relative;
-        @include mobile{
+        @include tablet{
             &:last-child{
                 grid-column:span 2;
                 display: flex;
@@ -76,7 +89,7 @@
         line-height: 160%;
         color: #1A0A03;
         opacity: 0.7;
-        @include mobile{
+        @include tablet{
             display: flex;
             justify-content: center;
             opacity: 1;
@@ -91,7 +104,7 @@
         height: 35px;
         left: -35px;
         top: 10px;
-        @include mobile{
+        @include tablet{
             left: -10px;
             top: 10px;
         }
@@ -106,9 +119,7 @@
         font-size: 18px;
         line-height: 160%;
         color: #1A0A03;
-        @include mobile{
-            
-        }
+
     }
     &__item-btnBuy{
         align-content: center;
@@ -155,7 +166,7 @@
 .shoes-table{
     display: flex;
     grid-gap: 270px;
-    @include mobile {
+    @include tablet {
         display: flex; 
         flex-direction: column;
         grid-gap: 0;

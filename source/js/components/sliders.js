@@ -32,7 +32,7 @@ import Swiper from '../vendor/swiper';
 
 let mainSlider = new Swiper(".chose-picture", {
   spaceBetween: 30,
-  slidesPerView: 'auto',
+  slidesPerView: '1',
   loop: true,
   observer: true,
   observeParents: true,

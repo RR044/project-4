@@ -1,6 +1,6 @@
 .select {
   position: relative;
-  max-width: 230px;
+  // max-width: 230px;
   width: 100%;
 }
 
@@ -19,21 +19,19 @@
     display: block;
   }
 
-  .select__header {
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-  }
+  // .select__header {
+  //   box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  // }
 }
 
 .select__header {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-width: 50px;
-  height: 26px;
-  padding: 0 0px;
   cursor: pointer;
   grid-gap: 10px;
-  @include mobile{
+  @include tablet{
     display: flex;
     justify-content:center;
   }
@@ -53,7 +51,7 @@
   font-size: 18px;
   line-height: 160%;
   color: #1A0A03;
-  @include mobile{
+  @include tablet{
     font-size: 16px;
     opacity: 0.7;
   }
@@ -64,10 +62,13 @@
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
-  width: 13px;
-  height: 6px;
+  width: 14px;
+  height: 8px;
   text-align: center;
   transition: all 0.4s;
+  background-image: url("data:image/svg+xml,%3Csvg width='14' height='8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='.4' d='m1 1 6 6 6-6' stroke='%23EE5514' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
 }
 
 .select__body {
@@ -95,33 +96,40 @@
   line-height: 100%;
   font-family: "Poppinsregular";
   font-weight: 500;
-  color: #1A0A03;
+  color: rgba(227, 77, 12, 0.595);
   text-transform: capitalize;
   letter-spacing: 0.05em;
 
-  cursor: pointer;
-  opacity: 0.5;
-  transition: all 0.4s;
-  user-select: none;
-  &:hover {
-    opacity: 1;
-    color: #1A0A03;
-  }
+ 
+
+
+  cursor:pointer;
+
+  // opacity: 0.5;
+  // transition: all 0.4s;
+  // user-select: none;
+
 }
 
 .select__wrapp {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 12px 0 10px;
+  padding: 12px 12px;
   z-index: 200;
-  background: rgb(247, 163, 127);
+  background-color: rgba(242, 241, 239, 0.919);
   border: 1px solid  var(--color-e);
   border-radius: 5px;
   grid-gap: 8px;
+  @include tablet{
+    width: 50%;
+    padding: 10px 10px 10px 20px;
+    grid-gap: 15px;
+    position: relative;
+    left: 20px;
+  }
 }
 
-// .select__item:hover {
-//   background-color: #1A0A03;
-//   color: #ffffff;
-// }
+.select__item:hover {
+  color: #e34d0c;
+}

@@ -115,6 +115,7 @@
         color: #1A0A03;
     }
     &__item-link{
+        position: relative;
         font-family: 'Poppinsregular';
         font-style: normal;
         font-weight: 500;
@@ -122,11 +123,20 @@
         line-height: 160%;
         text-align: center;
         color: #EE5514;
-    }
-    &__item-button{
-        position: relative;
-        bottom: -10px;
-        left: 10px;
+        &::after{
+            position: absolute;
+            content: "";
+            width: 6px;
+            height: 10px;
+            background-image: url("data:image/svg+xml,%3Csvg width='6' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1 9 4-4-4-4' stroke='%231A0A03' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-position: 50% 50%;
+            background-repeat: no-repeat;
+            transform: translateY(-30%);
+            background-size: contain;
+            right: -15px;
+            top: 50%;
+        }
+
     }
 }
 

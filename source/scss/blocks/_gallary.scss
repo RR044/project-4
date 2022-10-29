@@ -204,51 +204,46 @@
     grid-gap: 10px;
 }
 .gallary-scroll{
+    position: absolute;
+    right: 0;
+    top:15%;
     display: flex;
     justify-content: flex-end;
     grid-gap: 50px;
+    width: fit-content;
+    @include tablet{
+        top:110%;
+        right: 30%;
+        transform: translateX(-50%);
+        grid-gap: 35px;
+
+    }
+    @include mobile{
+        top:105%;
+        right: 10%;
+        grid-gap: 15px;
+    }
 }
-.gallary-L{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.gallary-btn{
     min-width: 50px;
     min-height: 50px;
     border-radius: 50%;
     border: 50px;
-    align-items: center;
-    justify-content: center;
-    svg{stroke: #1A0A03;}
-    border: none;
-    transition: .7s;
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1 17 8-8-8-8' stroke='%231A0A03' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    rotate: 180deg;
+    transition: all .4s;
     z-index: 1;
+    background-color:rgba(238, 85, 20, 0.22);
+    &:hover{
+      transform: scale(1.17);  
+    }
+    &--R{
+        rotate: 0deg;
+    }
 }
-.gallary-R{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 50px;
-    min-height: 50px;
-    border-radius: 50%;
-    border: 50px;
-    align-items: center;
-    justify-content: center;
-    svg{stroke: #1A0A03;}
-    border: none;
-    transition: .7s;
-    z-index: 1;
-}
-.gallary-:hover{
-    svg{stroke: #EE5514;} 
-    transition: 0.7s;
-}
-.gallary-L:hover{
-    svg{stroke: #EE5514;} 
-    transition: .7s;
-}
-.gallary button:hover{
-    background-color:rgba(238, 85, 20, 0.22)
-}
+
 .foot{
     position: relative;
     width:262px;
