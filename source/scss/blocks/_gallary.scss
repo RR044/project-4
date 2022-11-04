@@ -7,7 +7,7 @@
         display: flex;
         flex-direction: column;
         grid-gap: 15px;
-        @include mobile{
+        @include tablet{
             display: flex;
             align-items: center;
             justify-content: center;
@@ -18,7 +18,7 @@
         font-family: 'Sourcesemibold';
         font-style: normal;
         font-weight: 600;
-        font-size: 20px;
+        font-size: clamp(18px, 1.754vw, 20px);;
         line-height: 150%;
         letter-spacing: 0.05em;
         color: #EE5514;
@@ -27,12 +27,9 @@
         font-family: 'Sourcesemibold';
         font-style: normal;
         font-weight: 600;
-        font-size: 44px;
+        font-size: clamp(20px, 3.86vw, 44px);
         line-height: 130%;
         color: #1A0A03;
-        @include mobile{
-            font-size: 20px;
-        }
     }
     &-list{
         &__item{
@@ -40,12 +37,9 @@
                 font-family: 'Sourcesemibold';
                 font-style: normal;
                 font-weight: 600;
-                font-size: 22px;
+                font-size: clamp(20px, 1.93vw, 22px);;
                 line-height: 150%;
                 color: #1A0A03;
-                @include mobile{
-                    font-size: 20px;
-                }
             }
             &-size{
                 display: flex;
@@ -149,6 +143,14 @@
         margin: 10px 15px;
     }
     &__item{
+        &.active{
+            &::before{
+                top:0;
+                content: '';
+                width: 100%;
+                border: 2px solid #EE5514;;
+            }
+        }
         font-family: 'Poppinsregular';
         font-style: normal;
         font-weight: 400;
@@ -160,31 +162,28 @@
             font-size: 14px;
         }
         :hover {
-            font-family: 'Poppins-Medium';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 140%;
-            letter-spacing: 0.05em;
+            // font-family: 'Poppins-Medium';
+            // font-style: normal;
+            // font-weight: 500;
+            // font-size: 18px;
+            // line-height: 140%;
+            // letter-spacing: 0.05em;
             color: #EE5514;
             @include mobile{
                 font-size: 14px;
             }
         }
         :focus {
-            font-family: 'Poppins-Medium';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 18px;
-            line-height: 140%;
-            letter-spacing: 0.05em;
             color: #EE5514;
-            text-decoration: underline #EE5514;
+
             @include mobile{
                 font-size: 14px;
             }
         }
     }
+}
+.category-list__item{
+
 }
 .gallary-box{
     width: 100%;
@@ -253,6 +252,7 @@
 .tabs-main{
     display: grid;
     grid-template-columns: auto 1fr;
+    grid-gap: 10px;
 }
 .tabs-content{
     grid-column: span 2;

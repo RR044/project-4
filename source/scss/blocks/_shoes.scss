@@ -1,3 +1,6 @@
+.shoes{
+    padding-top: 30px;
+}
 .shoes-text{
     display: flex;
     flex-direction: column;
@@ -23,37 +26,27 @@
         font-family: 'Sourcesemibold';
         font-style: normal;
         font-weight: 600;
-        font-size: 61px;
+        font-size: clamp(22px, 5.351vw, 61px);
         line-height: 120%;
         color: #1A0A03;
-        @include tablet{
-            font-size: 44px;
-        }
-        @include mobile{
-            font-size: 22px;
-        }
     }
     &__colorword{
+        font-size: clamp(22px, 5.351vw, 61px);
         color:  #EE5514;
-        @include tablet{
-            font-size: 44px;
-        }
-        @include mobile{
-            font-size: 22px;
-        }
     }
     &__info{
         font-family: 'Poppinsregular';
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
+        font-size: clamp(14px, 1.404vw, 16px);
         line-height: 160%;
         color: #1A0A03;
         opacity: 0.7;
-        @include tablet{
-            font-size: 14px;
+        @include mobile{
+            text-align: center;
         }
     }
+
 }
 .shoes-select{
     display: flex;
@@ -63,11 +56,32 @@
     justify-content: flex-start;
     @include tablet{
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 200px 200px;
         grid-gap: 20px;
-
+        justify-content: center;
     }
     &__item{
+        &:not(:first-child){
+            &:before{
+                position: absolute;
+                content: "";
+                border-left: 1px solid #EE5514;
+                width: 0px;
+                height: 35px;
+                left: -35px;
+                top: 10px;
+                @include tablet{
+                    left: -10px;
+                    top: 10px;
+            
+                }
+            }
+        }
+        &:nth-child(odd){
+            &:before{
+              opacity: 0;
+            }
+          }
         display: flex;
         flex-direction: column;
         grid-gap: 2px;
@@ -95,22 +109,6 @@
             opacity: 1;
             font-size: 18px;
         }
-    }
-    &__item:not(:first-child)::before{
-        position: absolute;
-        content: "";
-        border-left: 1px solid #EE5514;
-        width: 0px;
-        height: 35px;
-        left: -35px;
-        top: 10px;
-        @include tablet{
-            left: -10px;
-            top: 10px;
-        }
-    }
-    &__item:last-child::before{
-        display: none;
     }
     &__item-text{
         font-family: 'Poppins-Medium';

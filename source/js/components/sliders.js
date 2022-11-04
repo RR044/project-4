@@ -47,8 +47,8 @@ let mainSlider = new Swiper(".chose-picture", {
     observer: true,
     observeParents: true,
     navigation: {
-      nextEl: '.swiper-button-next2',
-      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-prev',
+      prevEl: '.swiper-button-next2',
     },
     
     });
@@ -59,8 +59,8 @@ let mainSlider = new Swiper(".chose-picture", {
   observer: true,
   observeParents: true,
   navigation: {
-  nextEl: '.swiper-button-next3',
-  prevEl: '.swiper-button-prev3',
+  nextEl: '.swiper-button-prev3',
+  prevEl: '.swiper-button-next3',
     },
    
     });

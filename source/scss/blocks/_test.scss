@@ -31,13 +31,12 @@
     font-family: 'Sourcesemibold';
     font-style: normal;
     font-weight: 600;
-    font-size: 44px;
+    font-size: clamp(22px, 3.86vw, 44px);;
     line-height: 130%;
     color: #1A0A03;
     text-align: center;
     @include mobile{
         margin-bottom: 10px;
-        font-size: 22px;
     }
 }
 .shoesTwit{
@@ -53,11 +52,9 @@
         font-family: 'Sourcesemibold';
         font-style: normal;
         font-weight: 600;
-        font-size: 22px;
+        font-size: clamp(20px, 1.93vw, 22px);;
         color: #1A0A03;
-        @include mobile{
-            font-size: 20px;
-        }
+
     }
     &-comment{
         font-family: 'Poppinsmediumitalic';
@@ -67,20 +64,14 @@
         line-height: 160%;
         color: #1A0A03;
         opacity: 0.7;
-        @include mobile{
-            font-size: 12px;
-        }
     }
     &-name{
         font-family: 'Poppins-Medium';
         font-style: normal;
         font-weight: 500;
-        font-size: 18px;
+        font-size: clamp(16px, 1.579vw, 18px);;
         line-height: 160%;
         color: #1A0A03;
-        @include mobile{
-            font-size: 16px;
-        }
     }
     &-job{
         font-family: 'Poppinsregular';

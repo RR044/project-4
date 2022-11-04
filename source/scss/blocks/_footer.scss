@@ -64,6 +64,7 @@ footer .container {
 .footer-service{
   display: flex;
   grid-gap: 80px;
+  padding-top: 10px;
   @include tablet{
     display: grid;
     grid-template-columns: 1fr 1fr;
