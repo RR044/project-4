@@ -2,12 +2,13 @@
 position: absolute;
 top: 0;
 left: 0;
+height: 1500px;
 display: none;
 flex-direction: column;
 align-items: center;
-grid-gap: 25px;
-background-color: rgb(84, 64, 64);
-padding: 35px;
+grid-gap: 90px;
+background-color: rgb(229, 229, 229,);
+padding: 55px 95px 55px;
 z-index: 100;
 transform: translateX(-200%);
 transition: .5s;
@@ -21,6 +22,7 @@ transition: .5s;
     display: flex;
     min-width: 100px;
     min-height: 45px;
+    bottom: 0;
     &:hover{
         width: inherit;
         height:inherit;
@@ -32,9 +34,10 @@ transition: .5s;
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     grid-gap: 15px;
     &__link{
-        color: #fff;
+        color: #1A0A03;
     }
 
 }
