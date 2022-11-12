@@ -193,24 +193,19 @@
     grid-gap: 10px;
 }
 .gallary-scroll{
+    width: 100%;
+    display: flex;
     position: absolute;
     right: 0;
     top:15%;
-    display: flex;
+    width: fit-content;
     justify-content: flex-end;
     grid-gap: 50px;
-    width: fit-content;
     @include tablet{
-        top:110%;
-        right: 30%;
-        transform: translateX(-50%);
-        grid-gap: 35px;
-
-    }
-    @include mobile{
         top:105%;
-        right: 10%;
-        grid-gap: 15px;
+        right: 50%;
+        transform: translateX(50%);
+        grid-gap: 35px;
     }
 }
 .gallary-btn{

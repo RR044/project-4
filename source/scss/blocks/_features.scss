@@ -51,11 +51,15 @@
     display: flex;
     flex-direction: row;
     grid-gap: 30px;
-    @include mobile{
-        display: flex;
-        flex-direction: column;
+    @include tablet{
+        flex-wrap: wrap;
         margin: 0 25px;
-        grid-gap: 10px;
+        grid-gap: 30px;
+        justify-content: center;
+    } 
+    @include mobile{
+        margin: 0 25px;
+        grid-gap: 30px;
     } 
 
     &__item{
@@ -69,11 +73,12 @@
         min-height: 423px;
         padding: 60px;
         border-radius: 10px;
-        @include mobile{
+        @include tablet{
             display: flex;
-            min-height: 250px;
-            grid-gap: 10px;
-            padding: 5px;
+            min-height: 400px;
+            max-width: 300px;
+            grid-gap: 20px;
+            padding: 50px;
         } 
         &:hover{
             background-color:  rgba(238, 85, 20, 0.1);

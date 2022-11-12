@@ -7,7 +7,7 @@
 .athletic{
     display: flex;
     grid-gap: 127px;
-    @include mobile{
+    @include tablet{
         display: flex;
         flex-direction: column;
         grid-gap: 20px;
@@ -17,6 +17,10 @@
     padding: 0 15px;
     img{
         width: 100%;
+        @include tablet{
+            width: 550px;
+            height: 360px;
+        }
     }
     @include tablet{
         display: flex;
@@ -110,24 +114,20 @@
 
 
 .testimonials-scroll{
+    width: 100%;
     position: absolute;
-    right: 0;
-    top:15%;
+    right: 3%;
+    top: 28%;
     display: flex;
-    justify-content: flex-end;
+    justify-items: flex-end;
     grid-gap: 50px;
     width: fit-content;
+    z-index: 10;
     @include tablet{
-        top:110%;
-        right: 30%;
-        transform: translateX(-50%);
+        right: 50%;
+        transform: translateX(50%);
+        top: 103%;
         grid-gap: 35px;
-
-    }
-    @include mobile{
-        top:105%;
-        right: 10%;
-        grid-gap: 15px;
     }
 }
 .testimonials-btn{
