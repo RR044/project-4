@@ -14,13 +14,8 @@
     }
 }
 .runShoes{
-    padding: 0 15px;
     img{
         width: 100%;
-        @include tablet{
-            width: 550px;
-            height: 360px;
-        }
     }
     @include tablet{
         display: flex;

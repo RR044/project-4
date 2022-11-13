@@ -32,7 +32,7 @@ import Swiper from '../vendor/swiper';
 
 let mainSlider = new Swiper(".chose-picture", {
   spaceBetween: 30,
-  slidesPerView: '1',
+  slidesPerView: 'auto',
   loop: true,
   observer: true,
   observeParents: true,
@@ -50,6 +50,7 @@ let mainSlider = new Swiper(".chose-picture", {
       nextEl: '.swiper-button-prev',
       prevEl: '.swiper-button-next2',
     },
+
     
     });
   let gallarySlider = new Swiper(".gallary-swap", {
@@ -62,6 +63,29 @@ let mainSlider = new Swiper(".chose-picture", {
   nextEl: '.swiper-button-prev3',
   prevEl: '.swiper-button-next3',
     },
+    
+    breakpoints: {
+      // mobile - 320-414
+      320: {
+        slidesPerView: 1,
+      },
+       // mobile - 414-576
+       414: {
+        slidesPerView: 2,
+      },
+      // mobile + tablet - 576-768
+      576: {
+        slidesPerView: 3,
+        spaceBetween:20,
+      },
+      // desktop >= 768
+      768: {
+        slidesPerView: 4,
+        spaceBetween: 30,
+      },
+    },
+    
+
    
     });
     

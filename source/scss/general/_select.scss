@@ -33,7 +33,7 @@
   grid-gap: 10px;
   @include tablet{
     display: flex;
-    justify-content:center;
+    justify-content:flex-start;
   }
 }
 
@@ -117,16 +117,14 @@
   width: 100%;
   padding: 12px 12px;
   z-index: 200;
-  background-color: rgba(242, 241, 239, 0.919);
+  background-color: rgba(242, 241, 239, 1);
   border: 1px solid  var(--color-e);
   border-radius: 5px;
   grid-gap: 8px;
   @include tablet{
-    width: 50%;
-    padding: 10px 10px 10px 20px;
+    padding: 5px 5px 5px 5px;
     grid-gap: 15px;
     position: relative;
-    left: 50px;
   }
 }
 
